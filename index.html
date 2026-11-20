@@ -1,0 +1,2148 @@
+<html lang="en-UG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#faf7ef">
+  <meta name="description" content="Help Nakazzi Cecilia reach her UGX 500,000 tuition goal. Every UGX 100 moves her one metre closer to the finish line.">
+  <title>The 5K for Cissy</title>
+  <script>
+    window.CAMPAIGN = { raisedUGX: 155000, deadlineSunday: "" };
+    try {
+      const savedTheme = localStorage.getItem("cissy-theme");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch {}
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #faf7ef;
+      --paper: #fffefa;
+      --ink: #19233b;
+      --muted: #58627a;
+      --blue: #2447ce;
+      --blue-deep: #1735a6;
+      --blue-soft: #eef2ff;
+      --line: #e6e4db;
+      --gold: #ffce54;
+      --gold-soft: #fff0c4;
+      --gold-ink: #654407;
+      --green-soft: #edf5e7;
+      --green-ink: #245539;
+      --stage: #edf3e5;
+      --stage-line: #dce7d5;
+      --stage-type: #354f42;
+      --turf: #cce9a8;
+      --turf-stripe: #e1f4c1;
+      --turf-line: #a3c57e;
+      --turf-ink: #1c3d29;
+      --danger: #b42318;
+      --danger-soft: #fff0ed;
+      --shadow: 0 12px 34px #312c1910, 0 2px 5px #312c1908;
+      --font: "Avenir Next", Avenir, "Trebuchet MS", system-ui, sans-serif;
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --page: #141923;
+      --paper: #1d2432;
+      --ink: #f5f2e8;
+      --muted: #b6bfd3;
+      --blue: #aabaff;
+      --blue-deep: #c5cdff;
+      --blue-soft: #283454;
+      --line: #364054;
+      --gold-soft: #44391f;
+      --gold-ink: #ffdc81;
+      --green-soft: #263d34;
+      --green-ink: #bfebc9;
+      --stage: #263831;
+      --stage-line: #3b5147;
+      --stage-type: #dceede;
+      --turf: #b5d893;
+      --turf-stripe: #cce7a7;
+      --turf-line: #8fb474;
+      --danger: #ffb4ab;
+      --danger-soft: #4b2928;
+      --shadow: 0 12px 34px #0003;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        color-scheme: dark;
+        --page: #141923;
+        --paper: #1d2432;
+        --ink: #f5f2e8;
+        --muted: #b6bfd3;
+        --blue: #aabaff;
+        --blue-deep: #c5cdff;
+        --blue-soft: #283454;
+        --line: #364054;
+        --gold-soft: #44391f;
+        --gold-ink: #ffdc81;
+        --green-soft: #263d34;
+        --green-ink: #bfebc9;
+        --stage: #263831;
+        --stage-line: #3b5147;
+        --stage-type: #dceede;
+        --turf: #b5d893;
+        --turf-stripe: #cce7a7;
+        --turf-line: #8fb474;
+        --danger: #ffb4ab;
+        --danger-soft: #4b2928;
+        --shadow: 0 12px 34px #0003;
+      }
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    [hidden] {
+      display: none !important;
+    }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding-bottom: 84px;
+      background: radial-gradient(circle at 50% 0, color-mix(in srgb, var(--gold) 7%, transparent), transparent 31rem), var(--page);
+      color: var(--ink);
+      font: 1rem/1.5 var(--font);
+      -webkit-font-smoothing: antialiased;
+    }
+    button, input, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+    button, input {
+      font: inherit;
+    }
+    button {
+      color: inherit;
+    }
+    a {
+      color: inherit;
+    }
+    :focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+    .shell {
+      width: min(1120px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--page) 88%, transparent);
+      backdrop-filter: blur(14px);
+    }
+    .topbar-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .brand, .top-actions, .deadline, .eyebrow, .distance, .card-title {
+      display: flex;
+      align-items: center;
+    }
+    .brand {
+      min-width: 0;
+      gap: 9px;
+      text-decoration: none;
+      font-weight: 850;
+      letter-spacing: -.035em;
+      line-height: 1.15;
+    }
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex: none;
+      border-radius: 11px;
+      background: #2749d3;
+      color: #fff;
+      box-shadow: 0 3px 0 #172f9d;
+    }
+    .brand-text {
+      white-space: nowrap;
+    }
+    .top-actions {
+      flex: none;
+      gap: 8px;
+    }
+    .deadline {
+      gap: 6px;
+      padding: 7px 11px;
+      border-radius: 99px;
+      background: var(--gold-soft);
+      color: var(--gold-ink);
+      font-size: .75rem;
+      font-weight: 800;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .deadline svg {
+      flex: none;
+    }
+    .deadline-short {
+      display: none;
+    }
+    .icon-button {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      flex: none;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--paper);
+      color: var(--ink);
+      cursor: pointer;
+      transition: background-color .18s ease, transform .18s ease;
+    }
+    .icon-button:hover {
+      background: var(--blue-soft);
+    }
+    .icon-button:active {
+      transform: translateY(1px);
+    }
+    .hero {
+      position: relative;
+      isolation: isolate;
+      padding: 30px 0 26px;
+      text-align: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 50% 25%, #ffcb481a, transparent 64%);
+    }
+    .eyebrow {
+      width: fit-content;
+      margin: 0 auto 12px;
+      gap: 7px;
+      border-radius: 99px;
+      padding: 6px 12px;
+      background: var(--green-soft);
+      color: var(--green-ink);
+      font-size: .7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+    }
+    h1, h2, h3, p {
+      margin: 0;
+    }
+    h1 {
+      font-size: clamp(2.55rem, 7.5vw, 5.35rem);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -.075em;
+      text-wrap: balance;
+    }
+    .name-accent {
+      position: relative;
+      display: inline-block;
+      color: var(--blue);
+    }
+    .name-accent svg {
+      position: absolute;
+      bottom: -.12em;
+      left: .015em;
+      width: 101%;
+      height: .2em;
+      overflow: visible;
+      pointer-events: none;
+    }
+    .hero-copy {
+      max-width: 580px;
+      margin: 16px auto 0;
+      color: var(--muted);
+      font-size: clamp(.98rem, 2vw, 1.125rem);
+      text-wrap: pretty;
+    }
+    .hero-copy strong {
+      color: var(--ink);
+    }
+    .hero-prompts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .hero-pill {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: .82rem;
+      font-weight: 850;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #0000000a;
+      transition: transform .16s ease, background-color .16s ease, border-color .16s ease;
+    }
+    .hero-pill.is-primary {
+      border-color: #ac761c;
+      background: var(--gold);
+      color: #30230a;
+      box-shadow: 0 2px 0 #ac761c;
+    }
+    .hero-pill:active {
+      transform: translateY(1px);
+    }
+    .sparkle {
+      display: none;
+      position: absolute;
+      color: var(--blue);
+    }
+    .layout {
+      display: grid;
+      align-items: start;
+      gap: 18px;
+    }
+    .card {
+      min-width: 0;
+      padding: 18px 16px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 84px;
+    }
+    .race-head, .update-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .race-head {
+      margin-bottom: 13px;
+    }
+    .card-title {
+      min-width: 0;
+      gap: 10px;
+    }
+    .section-icon {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+    h2 {
+      font-size: clamp(1.24rem, 2.7vw, 1.65rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.045em;
+    }
+    .distance {
+      flex: none;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 99px;
+      background: var(--green-soft);
+      color: var(--green-ink);
+      font-size: .74rem;
+      font-weight: 850;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .distance::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .track-frame {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--stage-line);
+      border-radius: 17px;
+      background: var(--stage);
+    }
+    .track-svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: var(--font);
+    }
+    .map-label {
+      fill: var(--stage-type);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .095em;
+    }
+    .map-km {
+      fill: var(--stage-type);
+      font-size: 17px;
+      font-weight: 900;
+    }
+    .checkpoint {
+      cursor: pointer;
+    }
+    .checkpoint.is-passed .map-km {
+      fill: var(--ink);
+    }
+    .checkpoint circle.dot {
+      fill: #1936a2;
+      stroke: #fff4d9;
+      stroke-width: 2;
+      transition: fill .2s ease, transform .2s ease;
+    }
+    .checkpoint.is-passed circle.dot {
+      fill: var(--gold);
+      stroke: #593e11;
+    }
+    .checkpoint:focus-visible {
+      outline: none;
+    }
+    .checkpoint:focus-visible circle.dot {
+      stroke: var(--blue);
+      stroke-width: 3.5;
+    }
+    .turf-title {
+      fill: var(--turf-ink);
+      font-size: 78px;
+      font-weight: 900;
+      letter-spacing: -.075em;
+    }
+    .turf-caption {
+      fill: var(--turf-ink);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .16em;
+    }
+    .turf-distance {
+      fill: var(--turf-ink);
+      font-size: 17px;
+      font-weight: 800;
+    }
+    .track-legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px 16px;
+      padding: 0 8px 10px;
+      color: var(--stage-type);
+      font-size: .72rem;
+      font-weight: 750;
+    }
+    .track-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .swatch {
+      width: 15px;
+      height: 5px;
+      border-radius: 10px;
+      background: #2c49cc;
+    }
+    .swatch.gold {
+      background: #ffc746;
+      outline: 1px solid #76500955;
+    }
+    .checkpoint-prompt {
+      margin-top: 10px;
+      padding: 10px 13px;
+      border-radius: 13px;
+      background: var(--blue-soft);
+      color: var(--blue-deep);
+      font-size: .82rem;
+      font-weight: 750;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .checkpoint-prompt button {
+      min-height: 36px;
+      padding: 4px 10px;
+      border: 1px solid color-mix(in srgb, var(--blue) 22%, transparent);
+      border-radius: 9px;
+      background: var(--paper);
+      color: var(--blue-deep);
+      font-size: .74rem;
+      font-weight: 850;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 17px;
+    }
+    .stat {
+      min-width: 0;
+      padding: 0 9px 0 0;
+    }
+    .stat + .stat {
+      padding: 0 0 0 12px;
+      border-left: 1px solid var(--line);
+    }
+    .stat-label {
+      display: block;
+      color: var(--muted);
+      font-size: .69rem;
+      font-weight: 900;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .stat-value {
+      display: block;
+      margin: 3px 0 1px;
+      color: var(--ink);
+      font-size: clamp(1.22rem, 4.2vw, 2rem);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -.055em;
+      line-height: 1.12;
+      overflow-wrap: anywhere;
+    }
+    .stat:first-child .stat-value {
+      color: var(--blue);
+    }
+    .stat-unit {
+      font-size: .56em;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+    .stat-detail {
+      display: block;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+    .complete {
+      margin-top: 17px;
+      padding: 13px 15px;
+      border-radius: 13px;
+      background: var(--gold-soft);
+      color: var(--gold-ink);
+      font-size: .91rem;
+    }
+    .give-intro {
+      margin: 8px 0 14px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .boost-box {
+      margin-bottom: 14px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: color-mix(in srgb, var(--gold-soft) 35%, var(--paper));
+    }
+    .boost-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: .75rem;
+      font-weight: 850;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .boost-pills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .boost-pill {
+      min-height: 46px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: .78rem;
+      font-weight: 850;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color .16s ease, border-color .16s ease, transform .12s ease;
+    }
+    .boost-pill span {
+      display: block;
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 750;
+    }
+    .boost-pill.is-selected {
+      border-color: var(--blue);
+      background: var(--blue-soft);
+      color: var(--blue-deep);
+    }
+    .boost-pill.is-selected span {
+      color: var(--blue-deep);
+    }
+    .boost-pill:active {
+      transform: scale(.98);
+    }
+    .boost-feedback {
+      margin-top: 9px;
+      color: var(--green-ink);
+      font-size: .8rem;
+      font-weight: 800;
+    }
+    .recipient {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid color-mix(in srgb, var(--blue) 17%, transparent);
+      border-radius: 14px;
+      background: var(--blue-soft);
+    }
+    .recipient-label {
+      display: block;
+      color: var(--blue-deep);
+      font-size: .66rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .recipient-number {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(1.25rem, 5vw, 1.55rem);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -.035em;
+      line-height: 1.25;
+      user-select: all;
+    }
+    .recipient-name {
+      display: block;
+      color: var(--muted);
+      font-size: .8rem;
+      font-weight: 750;
+    }
+    .action {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 10px 14px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-size: .84rem;
+      font-weight: 900;
+      line-height: 1.2;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color .18s ease, transform .18s ease, box-shadow .18s ease;
+    }
+    .action svg {
+      flex: none;
+    }
+    .action:active {
+      transform: translateY(1px);
+    }
+    .copy-action {
+      min-width: 120px;
+      background: var(--gold);
+      color: #30230a;
+      box-shadow: 0 2px 0 #ac761c;
+    }
+    .copy-action:hover {
+      background: #ffdb79;
+    }
+    .networks-heading {
+      margin: 14px 0 6px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+    .networks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .network-btn {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px 6px;
+      padding: 10px 11px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--paper);
+      font-size: .78rem;
+      font-weight: 850;
+      text-align: left;
+      cursor: pointer;
+      transition: background-color .16s ease, border-color .16s ease, transform .12s ease;
+    }
+    .network-btn:hover, .network-btn.is-active {
+      border-color: var(--blue);
+      background: var(--blue-soft);
+    }
+    .network-btn:active {
+      transform: scale(.98);
+    }
+    .network-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .net-dot {
+      width: 8px;
+      height: 8px;
+      flex: none;
+      border-radius: 50%;
+      background: #df3756;
+    }
+    .net-dot.mtn {
+      background: #e9af17;
+    }
+    .code {
+      color: var(--blue-deep);
+      font-size: .85rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .network-prompt-panel {
+      margin-top: 10px;
+      padding: 12px;
+      border: 1px solid color-mix(in srgb, var(--blue) 22%, transparent);
+      border-radius: 13px;
+      background: var(--blue-soft);
+      font-size: .83rem;
+    }
+    .network-prompt-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-weight: 900;
+      color: var(--blue-deep);
+    }
+    .network-prompt-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .dial-action {
+      background: #2749d3;
+      color: #fff;
+      box-shadow: 0 2px 0 #172f9d;
+    }
+    .dial-action:hover {
+      background: #3155df;
+    }
+    .secondary-action {
+      border-color: var(--line);
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .steps {
+      margin: 14px 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: how;
+    }
+    .steps li {
+      position: relative;
+      min-height: 23px;
+      margin-bottom: 8px;
+      padding: 1px 0 0 31px;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.4;
+      counter-increment: how;
+    }
+    .steps li::before {
+      content: counter(how);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--blue-soft);
+      color: var(--blue-deep);
+      font-size: .7rem;
+      font-weight: 900;
+    }
+    .steps strong {
+      color: var(--ink);
+    }
+    .share-stack {
+      display: grid;
+      gap: 8px;
+    }
+    .share-action {
+      width: 100%;
+      min-height: 48px;
+      border-color: color-mix(in srgb, var(--green-ink) 20%, transparent);
+      background: var(--green-soft);
+      color: var(--green-ink);
+      font-size: .88rem;
+    }
+    .share-action:hover {
+      box-shadow: inset 0 0 0 1px currentColor;
+    }
+    .copy-status:not(:empty) {
+      margin: 7px 0 0;
+      color: var(--green-ink);
+      font-size: .8rem;
+      font-weight: 750;
+    }
+    .update-card {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      grid-column: 1 / -1;
+    }
+    .update-card::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: linear-gradient(120deg, color-mix(in srgb, var(--blue-soft) 45%, transparent), transparent 50%);
+      pointer-events: none;
+    }
+    .organizer-badge {
+      flex: none;
+      padding: 5px 9px;
+      border: 1px solid color-mix(in srgb, var(--blue) 18%, transparent);
+      border-radius: 99px;
+      background: var(--blue-soft);
+      color: var(--blue-deep);
+      font-size: .65rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .update-intro {
+      max-width: 730px;
+      margin: 10px 0 0 48px;
+      color: var(--muted);
+      font-size: .87rem;
+    }
+    .update-form {
+      display: grid;
+      gap: 13px;
+      margin-top: 17px;
+    }
+    .field-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .055em;
+      text-transform: uppercase;
+    }
+    .amount-input-shell {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--paper);
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+    .amount-input-shell:focus-within {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 15%, transparent);
+    }
+    .amount-prefix {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      border-right: 1px solid var(--line);
+      background: var(--blue-soft);
+      color: var(--blue-deep);
+      font-size: .75rem;
+      font-weight: 900;
+      letter-spacing: .06em;
+    }
+    .amount-input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      padding: 10px 12px;
+      background: transparent;
+      color: var(--ink);
+      font-size: clamp(1.12rem, 4vw, 1.4rem);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -.025em;
+    }
+    .amount-input::placeholder {
+      color: var(--muted);
+      opacity: .65;
+    }
+    .quick-add {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .quick-label {
+      margin-right: 2px;
+      color: var(--muted);
+      font-size: .74rem;
+      font-weight: 800;
+    }
+    .quick-button {
+      min-height: 44px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--paper);
+      color: var(--blue-deep);
+      font-size: .78rem;
+      font-weight: 900;
+      cursor: pointer;
+      transition: background-color .18s ease, border-color .18s ease;
+    }
+    .quick-button:hover {
+      border-color: color-mix(in srgb, var(--blue) 35%, var(--line));
+      background: var(--blue-soft);
+    }
+    .update-actions {
+      display: flex;
+      align-items: stretch;
+    }
+    .update-action {
+      width: 100%;
+      min-height: 52px;
+      padding-inline: 17px;
+      border-color: #1937a9;
+      background: #2749d3;
+      color: #fff;
+      box-shadow: 0 3px 0 #172f9d;
+      font-size: .88rem;
+      white-space: nowrap;
+    }
+    .update-action:hover {
+      background: #3155df;
+    }
+    .update-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-top: 13px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .75rem;
+    }
+    .device-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .device-note svg {
+      flex: none;
+      color: var(--green-ink);
+    }
+    .editor-total {
+      color: var(--muted);
+    }
+    .editor-total strong {
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .update-status {
+      min-height: 1.25rem;
+      margin-top: 7px;
+      color: var(--green-ink);
+      font-size: .8rem;
+      font-weight: 750;
+    }
+    .update-status.is-error {
+      color: var(--danger);
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 22px 0 25px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 750;
+    }
+    .footer svg {
+      flex: none;
+      color: var(--blue);
+    }
+    .mobile-dock {
+      position: fixed;
+      inset-inline: 0;
+      bottom: 0;
+      z-index: 30;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      border-top: 1px solid var(--line);
+      background: color-mix(in srgb, var(--paper) 94%, transparent);
+      backdrop-filter: blur(16px);
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 10px;
+      box-shadow: 0 -8px 24px #00000014;
+    }
+    .dock-btn {
+      min-height: 48px;
+      border-radius: 13px;
+      font-size: .86rem;
+      font-weight: 900;
+    }
+    .dock-give {
+      background: var(--gold);
+      color: #30230a;
+      box-shadow: 0 2px 0 #ac761c;
+    }
+    .dock-share {
+      border-color: color-mix(in srgb, var(--green-ink) 24%, transparent);
+      background: var(--green-soft);
+      color: var(--green-ink);
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      border: 0;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+    /* Admin password styles */
+    .admin-gate {
+      margin-top: 17px;
+    }
+    .password-input-shell {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--paper);
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+    .password-input-shell:focus-within {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 15%, transparent);
+    }
+    .password-input {
+      width: 100%;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      padding: 10px 12px;
+      background: transparent;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 900;
+    }
+    .password-input::placeholder {
+      color: var(--muted);
+      opacity: .65;
+    }
+    .lock-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 750;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px 0;
+    }
+    .lock-toggle:hover {
+      color: var(--blue);
+    }
+    @media (min-width: 520px) {
+      .shell {
+        width: min(1120px, calc(100% - 52px));
+      }
+      .topbar-inner {
+        min-height: 72px;
+      }
+      .top-actions {
+        gap: 12px;
+      }
+      .deadline {
+        padding: 8px 12px;
+        font-size: .8rem;
+      }
+      .hero {
+        padding: 38px 0 32px;
+      }
+      .card {
+        padding: 21px;
+      }
+      .distance {
+        padding: 6px 11px;
+        font-size: .77rem;
+      }
+      .stat + .stat {
+        padding-left: 20px;
+      }
+      .recipient {
+        padding: 12px;
+      }
+      .boost-pills {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .update-form {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+      }
+      .update-actions {
+        padding-bottom: 54px;
+      }
+      .update-action {
+        width: auto;
+        min-width: 160px;
+      }
+    }
+    @media (min-width: 830px) {
+      body {
+        padding-bottom: 0;
+      }
+      .mobile-dock {
+        display: none;
+      }
+      .hero {
+        padding: 38px 0 33px;
+      }
+      .sparkle {
+        display: block;
+      }
+      .sparkle-left {
+        top: 41%;
+        left: 11.5%;
+        transform: rotate(-10deg);
+      }
+      .sparkle-right {
+        top: 23%;
+        right: 10.5%;
+        color: #bd870e;
+        transform: rotate(12deg);
+      }
+      .layout {
+        grid-template-columns: minmax(0, 1.67fr) minmax(325px, 1fr);
+        gap: 20px;
+        align-items: stretch;
+      }
+      .race-card {
+        display: flex;
+        flex-direction: column;
+      }
+      .track-frame {
+        margin-block: auto;
+      }
+      .stats {
+        margin-top: 19px;
+      }
+      .update-card {
+        padding-inline: 24px;
+      }
+    }
+    @media (max-width: 620px) {
+      .deadline-long {
+        display: none;
+      }
+      .deadline-short {
+        display: inline;
+      }
+    }
+    @media (max-width: 420px) {
+      .update-intro {
+        margin-left: 0;
+      }
+      .update-head {
+        align-items: flex-start;
+      }
+      .organizer-badge {
+        margin-top: 3px;
+      }
+      .network-prompt-actions {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 360px) {
+      .shell {
+        width: calc(100% - 24px);
+      }
+      .brand {
+        font-size: .86rem;
+      }
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+      }
+      .deadline {
+        font-size: .68rem;
+      }
+      .deadline svg {
+        display: none;
+      }
+      .card {
+        padding: 14px;
+      }
+      .race-head .section-icon {
+        display: none;
+      }
+      .recipient {
+        padding: 10px;
+      }
+      .organizer-badge {
+        padding-inline: 7px;
+        font-size: .59rem;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#top" aria-label="The 5K for Cissy, back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+            <path d="M5 21V4m0 1h13l-2.5 4L18 13H5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6h3v3H6zm3 3h3v3H9zm3-3h3v3h-3z" fill="#ffce54"/>
+          </svg>
+        </span>
+        <span class="brand-text">The 5K for Cissy</span>
+      </a>
+      <div class="top-actions">
+        <p class="deadline" id="deadline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+          </svg>
+          <span class="deadline-long" id="deadline-text">Ends Sunday</span>
+          <span class="deadline-short" id="deadline-short">Sunday</span>
+        </p>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <svg id="moon-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.8 14.4A9 9 0 0 1 9.6 3.2a9 9 0 1 0 11.2 11.2Z"/>
+          </svg>
+          <svg id="sun-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="display:none">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <svg class="sparkle sparkle-left" width="43" height="52" viewBox="0 0 43 52" fill="none" aria-hidden="true">
+        <path d="M16 7c0 12-3 16-12 19 9 2 12 7 12 18 1-11 4-16 13-18C20 23 17 19 16 7Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/>
+        <path d="M34 3v12m-6-6h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="sparkle sparkle-right" width="48" height="55" viewBox="0 0 48 55" fill="none" aria-hidden="true">
+        <path d="M29 6c0 12-4 17-14 20 10 2 14 7 14 19 1-12 5-17 15-19C34 23 30 18 29 6Z" fill="#ffce54" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        <path d="M9 34v13m-6-6.5h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <p class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 21S3 15.4 3 9.3A4.7 4.7 0 0 1 12 7a4.7 4.7 0 0 1 9 2.3C21 15.4 12 21 12 21Z"/>
+        </svg>
+        Friends on a mission
+      </p>
+      <h1 id="page-title">The 5K for <span class="name-accent">Cissy<svg viewBox="0 0 190 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14C53 2 116 2 185 8" fill="none" stroke="#ffce54" stroke-width="6" stroke-linecap="round"/></svg></span></h1>
+      <p class="hero-copy"><strong>Every UGX 100 is one metre.</strong> Help Nakazzi Cecilia reach the finish line by Sunday.</p>
+      <div class="hero-prompts" aria-label="Quick actions">
+        <a class="hero-pill is-primary" href="#give-card">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14m-7-7h14"/>
+          </svg>
+          Give via Mobile Money
+        </a>
+        <a class="hero-pill" href="#race-card">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4V8Z"/>
+          </svg>
+          See 5K Track
+        </a>
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="card race-card" id="race-card" aria-labelledby="race-title">
+        <div class="race-head">
+          <div class="card-title">
+            <span class="section-icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="7"/><rect x="6.5" y="8.5" width="11" height="7" rx="3.5"/><path d="M12 5v3.5"/>
+              </svg>
+            </span>
+            <h2 id="race-title">Race progress</h2>
+          </div>
+          <span class="distance" id="distance-badge">1,550 m run</span>
+        </div>
+
+        <figure class="track-frame">
+          <svg class="track-svg" viewBox="0 0 620 313" role="img" aria-labelledby="track-title track-description">
+            <title id="track-title">The 5K fundraising track</title>
+            <desc id="track-description">31 percent of the goal reached. 1,550 metres of 5,000 metres run. The 1K checkpoint has been passed.</desc>
+            <defs>
+              <pattern id="turf-stripes" width="48" height="24" patternUnits="userSpaceOnUse">
+                <rect width="48" height="24" fill="var(--turf)"/>
+                <rect width="24" height="24" fill="var(--turf-stripe)" opacity=".52"/>
+              </pattern>
+              <pattern id="finish-checkers" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="translate(304 46)">
+                <rect width="12" height="12" fill="#fffef3"/>
+                <path d="M0 0h6v6H0zm6 6h6v6H6z" fill="#152657"/>
+              </pattern>
+              <pattern id="stage-dots" width="15" height="15" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1" fill="var(--stage-line)" opacity=".7"/>
+              </pattern>
+              <linearGradient id="lane-color" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3659df"/>
+                <stop offset="1" stop-color="#233fb9"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="620" height="313" fill="url(#stage-dots)"/>
+            <path d="M310 68H462A93 93 0 0 1 462 254H158A93 93 0 0 1 158 68H310Z" fill="url(#turf-stripes)" stroke="var(--stage-line)" stroke-width="52"/>
+            <path d="M310 68H462A93 93 0 0 1 462 254H158A93 93 0 0 1 158 68H310Z" fill="none" stroke="url(#lane-color)" stroke-width="44"/>
+            <g fill="none" stroke="#e8edff" stroke-width="1.2">
+              <rect x="47" y="50" width="526" height="222" rx="111" opacity=".78"/>
+              <rect x="56" y="59" width="508" height="204" rx="102" opacity=".64"/>
+              <rect x="74" y="77" width="472" height="168" rx="84" opacity=".64"/>
+              <rect x="83" y="86" width="454" height="150" rx="75" opacity=".83"/>
+            </g>
+            <g fill="none" stroke="var(--turf-line)" stroke-width="1.4" opacity=".7">
+              <path d="M181 103v116m258-116v116" stroke-dasharray="4 5"/>
+              <path d="M120 145h24m-12-12v24m344 16h24m-12-12v24"/>
+            </g>
+            <path id="course" d="M310 68H462A93 93 0 0 1 462 254H158A93 93 0 0 1 158 68H310Z" fill="none" stroke="#c0ccff" stroke-width="1" stroke-dasharray="3 5" opacity=".66"/>
+            <path id="gold-trail" d="M310 68H462A93 93 0 0 1 462 254H158A93 93 0 0 1 158 68H310Z" pathLength="100" fill="none" stroke="#ffce54" stroke-width="8" stroke-linecap="round" stroke-dasharray="31 100"/>
+            <text x="310" y="30" text-anchor="middle" class="map-label">START / FINISH</text>
+            <path d="M310 34v9" stroke="var(--stage-type)" stroke-width="1.4" stroke-linecap="round"/>
+            <rect x="304" y="46" width="12" height="44" rx="1" fill="url(#finish-checkers)" stroke="#152657" stroke-width="1"/>
+            <g class="checkpoint is-passed" data-km="1" role="button" tabindex="0" aria-label="1K checkpoint, UGX 100,000">
+              <circle cx="537" cy="106" r="20" fill="transparent"/>
+              <circle class="dot" cx="537" cy="106" r="8"/>
+              <text x="569" y="80" text-anchor="middle" class="map-km">1K</text>
+            </g>
+            <g class="checkpoint" data-km="2" role="button" tabindex="0" aria-label="2K checkpoint, UGX 200,000">
+              <circle cx="429" cy="254" r="20" fill="transparent"/>
+              <circle class="dot" cx="429" cy="254" r="8"/>
+              <text x="429" y="298" text-anchor="middle" class="map-km">2K</text>
+            </g>
+            <g class="checkpoint" data-km="3" role="button" tabindex="0" aria-label="3K checkpoint, UGX 300,000">
+              <circle cx="191" cy="254" r="20" fill="transparent"/>
+              <circle class="dot" cx="191" cy="254" r="8"/>
+              <text x="191" y="298" text-anchor="middle" class="map-km">3K</text>
+            </g>
+            <g class="checkpoint" data-km="4" role="button" tabindex="0" aria-label="4K checkpoint, UGX 400,000">
+              <circle cx="83" cy="106" r="20" fill="transparent"/>
+              <circle class="dot" cx="83" cy="106" r="8"/>
+              <text x="51" y="80" text-anchor="middle" class="map-km">4K</text>
+            </g>
+            <text id="track-percent" x="307" y="166" text-anchor="middle" class="turf-title">31%</text>
+            <text id="track-caption" x="310" y="192" text-anchor="middle" class="turf-caption">OF THE WAY THERE</text>
+            <text id="track-distance" x="310" y="216" text-anchor="middle" class="turf-distance">1,550 m / 5,000 m</text>
+            <g id="runner" transform="translate(529 228)">
+              <circle cy="2" r="17" fill="#102166" opacity=".29"/>
+              <circle r="17" fill="#ffce54" stroke="#fff8de" stroke-width="2.5"/>
+              <g fill="none" stroke="#26345c" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m1.5-4-4 5.4 5.8 3.5-2 5.5m-3.8-9-4 5-4 .4M1.5-4l5 3 3.8-2.1M1.5-4l-5.6-.5-2.8 3.7"/>
+              </g>
+              <circle cx="4" cy="-8" r="2.2" fill="#26345c"/>
+            </g>
+          </svg>
+          <figcaption class="track-legend">
+            <span><i class="swatch gold" aria-hidden="true"></i>Distance covered</span>
+            <span><i class="swatch" aria-hidden="true"></i>Distance to go</span>
+          </figcaption>
+        </figure>
+
+        <div class="checkpoint-prompt" id="checkpoint-prompt" role="status" aria-live="polite">
+          <span id="checkpoint-message">Tap any checkpoint (1K–4K) on the track to inspect its UGX milestone.</span>
+          <button type="button" id="checkpoint-give-btn">Help reach next</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">Raised so far</span>
+            <strong class="stat-value"><span class="stat-unit">UGX</span> <span id="amount-raised">155,000</span></strong>
+            <span class="stat-detail">of UGX 500,000 goal</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Still to go</span>
+            <strong class="stat-value"><span class="stat-unit">UGX</span> <span id="amount-left">345,000</span></strong>
+            <span class="stat-detail" id="metres-left">3,450 m to the finish</span>
+          </div>
+        </div>
+        <p class="complete" id="goal-message" hidden><strong>Goal reached!</strong> We made it to 5K together. Thank you for helping Cissy reach her tuition goal!</p>
+      </section>
+
+      <section class="card give-card" id="give-card" aria-labelledby="give-title">
+        <div class="card-title">
+          <span class="section-icon" aria-hidden="true">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2m-4-9 3-2.5 3 2.5m-3-2.5v8"/>
+            </svg>
+          </span>
+          <h2 id="give-title">Give to Cissy</h2>
+        </div>
+        <p class="give-intro">Send any amount via mobile money.</p>
+        <div class="boost-box">
+          <span class="boost-label">See how far your gift moves Cissy</span>
+          <div class="boost-pills" role="group" aria-label="Sample gift amounts">
+            <button type="button" class="boost-pill" data-gift="2000">UGX 2,000<span>+20 metres</span></button>
+            <button type="button" class="boost-pill" data-gift="5000">UGX 5,000<span>+50 metres</span></button>
+            <button type="button" class="boost-pill is-selected" data-gift="10000">UGX 10,000<span>+100 metres</span></button>
+            <button type="button" class="boost-pill" data-gift="20000">UGX 20,000<span>+200 metres</span></button>
+          </div>
+          <p class="boost-feedback" id="boost-feedback">A UGX 10,000 gift moves Cissy 100 metres closer to the finish!</p>
+        </div>
+        <div class="recipient">
+          <div>
+            <span class="recipient-label">Send to</span>
+            <strong class="recipient-number" id="recipient-number">0709208673</strong>
+            <span class="recipient-name">Nakazzi Cecilia</span>
+          </div>
+          <button class="action copy-action" id="copy-number" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>
+            </svg>
+            <span id="copy-label">Copy number</span>
+          </button>
+        </div>
+        <p id="copy-status" class="copy-status" role="status"></p>
+        <p class="networks-heading">Tap your network to open mobile dialer</p>
+        <div class="networks" aria-label="Mobile money dial codes">
+          <button type="button" class="network-btn" id="btn-airtel" data-network="airtel" aria-expanded="false">
+            <span class="network-name"><i class="net-dot" aria-hidden="true"></i>Airtel Money</span>
+            <span class="code">*185#</span>
+          </button>
+          <button type="button" class="network-btn" id="btn-mtn" data-network="mtn" aria-expanded="false">
+            <span class="network-name"><i class="net-dot mtn" aria-hidden="true"></i>MTN MoMo</span>
+            <span class="code">*165#</span>
+          </button>
+        </div>
+        <div class="network-prompt-panel" id="network-prompt-panel" hidden>
+          <div class="network-prompt-head">
+            <span id="network-prompt-title">Airtel Money (*185#)</span>
+            <button type="button" id="close-network-prompt" aria-label="Close mobile money prompt" style="border:0;background:transparent;font-weight:900;cursor:pointer;padding:4px 8px;">✕</button>
+          </div>
+          <p id="network-prompt-steps">Dial <strong>*185#</strong>, pick <strong>Send Money</strong>, enter <strong>0709208673</strong>, and verify <strong>Nakazzi Cecilia</strong>.</p>
+          <div class="network-prompt-actions">
+            <a class="action dial-action" id="network-dial-link" href="tel:*185%23">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>
+              </svg>
+              <span id="network-dial-text">Dial *185#</span>
+            </a>
+            <button type="button" class="action secondary-action" id="network-copy-btn">Copy 0709208673</button>
+          </div>
+        </div>
+        <ol class="steps" aria-label="How to give">
+          <li>Copy the number or tap your network above to dial.</li>
+          <li>Choose <strong>Send Money</strong> and enter <strong>0709208673</strong>.</li>
+          <li>Check the name shows <strong>Nakazzi Cecilia</strong> before confirming.</li>
+          <li>Enter your amount and PIN. <strong>Thank you!</strong></li>
+        </ol>
+        <div class="share-stack">
+          <a class="action share-action" id="whatsapp-share" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.7 11.8a8.7 8.7 0 0 1-12.6 7.8L4 20.7l1.1-4A8.7 8.7 0 1 1 20.7 11.8Z"/>
+              <path d="M9 7.8c-.5-.3-1 .1-1.2.7-.4 1.3.6 3.1 2.1 4.6s3.3 2.5 4.6 2.1c.6-.2 1-.7.7-1.2l-1.6-1c-.3-.2-.6 0-.9.4-.2.2-.5.2-.8 0a8 8 0 0 1-2.3-2.3c-.2-.3-.2-.6 0-.8.4-.3.6-.6.4-.9Z"/>
+            </svg>
+            Share on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <section class="card update-card" aria-labelledby="update-title">
+        <div class="update-head">
+          <div class="card-title">
+            <span class="section-icon" aria-hidden="true">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/>
+                <path d="m15 6 3-3 3 3M18 3v7"/>
+              </svg>
+            </span>
+            <h2 id="update-title">Update money collected</h2>
+          </div>
+          <span class="organizer-badge">Organizer tool</span>
+        </div>
+        <p class="update-intro">Enter the total collected so far—not only the latest gift. Saving it will update the amount, percentage, checkpoints and runner instantly.</p>
+
+        <!-- Password Gate -->
+        <div class="admin-gate" id="admin-gate">
+          <label class="field-label" for="admin-password">Admin password</label>
+          <div class="password-input-shell">
+            <input type="password" id="admin-password" class="password-input" placeholder="Enter admin password" autocomplete="off">
+          </div>
+          <button type="button" class="action update-action" id="verify-admin-btn" style="margin-top:10px;">Unlock editor</button>
+          <p class="update-status" id="password-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- Editor Panel (hidden until password verified) -->
+        <div id="update-editor-panel" hidden>
+          <button type="button" class="lock-toggle" id="lock-editor-btn">🔒 Lock editor</button>
+          <form class="update-form" id="update-form" novalidate>
+            <div class="amount-field">
+              <label class="field-label" for="raised-input">Total collected so far</label>
+              <div class="amount-input-shell">
+                <span class="amount-prefix">UGX</span>
+                <input class="amount-input" id="raised-input" name="raised" type="text" inputmode="numeric" autocomplete="off" maxlength="15" placeholder="155,000" aria-describedby="amount-help update-status">
+              </div>
+              <div class="quick-add" id="amount-help" aria-label="Quick amount additions">
+                <span class="quick-label">Quick add:</span>
+                <button class="quick-button" type="button" data-add="5000">+5,000</button>
+                <button class="quick-button" type="button" data-add="10000">+10,000</button>
+                <button class="quick-button" type="button" data-add="20000">+20,000</button>
+                <button class="quick-button" type="button" data-add="50000">+50,000</button>
+              </div>
+            </div>
+            <div class="update-actions">
+              <button class="action update-action" id="update-progress" type="submit">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12.5 9.2 17 19 7"/>
+                </svg>
+                <span id="update-label">Update race</span>
+              </button>
+            </div>
+          </form>
+          <div class="update-meta">
+            <span class="device-note">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M12 15v2"/>
+              </svg>
+              Saved on this device; shared links include the updated total.
+            </span>
+            <span class="editor-total">Current total: <strong id="editor-current">UGX 155,000</strong></span>
+          </div>
+          <p class="update-status" id="update-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="shell footer">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 21S3 15.4 3 9.3A4.7 4.7 0 0 1 12 7a4.7 4.7 0 0 1 9 2.3C21 15.4 12 21 12 21Z"/>
+    </svg>
+    Made with love by Cissy's friends.
+  </footer>
+
+  <!-- Mobile-first sticky bottom prompt bar -->
+  <nav class="mobile-dock" aria-label="Mobile quick actions">
+    <a class="action dock-btn dock-give" href="#give-card" id="dock-give">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 21S3 15.4 3 9.3A4.7 4.7 0 0 1 12 7a4.7 4.7 0 0 1 9 2.3C21 15.4 12 21 12 21Z"/>
+      </svg>
+      Give to Cissy
+    </a>
+    <button type="button" class="action dock-btn dock-share" id="dock-share">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <path d="m8.6 13.5 6.8 4m0-11-6.8 4"/>
+      </svg>
+      Share
+    </button>
+  </nav>
+
+  <script>
+    (() => {
+      "use strict";
+      const $ = (id) => document.getElementById(id);
+      const GOAL_UGX = 500000;
+      const UGX_PER_METRE = 100;
+      const TOTAL_METRES = GOAL_UGX / UGX_PER_METRE;
+      const MAX_AMOUNT = 999999999;
+      const AMOUNT_STORAGE_KEY = "cissy-raised-ugx";
+      const format = new Intl.NumberFormat("en-UG");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const number = (value) => format.format(Math.max(0, Math.trunc(value)));
+      const clampAmount = (value) => {
+        const numeric = Math.trunc(Number(value));
+        if (!Number.isFinite(numeric)) return 0;
+        return Math.min(MAX_AMOUNT, Math.max(0, numeric));
+      };
+      const parseAmount = (value) => {
+        const digits = String(value).replace(/[^\d]/g, "");
+        if (!digits) return null;
+        const parsed = Number(digits);
+        return Number.isSafeInteger(parsed) ? clampAmount(parsed) : null;
+      };
+      const percentLabel = (fraction) => {
+        const percent = Math.min(100, Math.max(0, fraction * 100));
+        const rounded = Math.round(percent * 10) / 10;
+        return `${Number.isInteger(rounded) ? rounded.toFixed(0) : rounded.toFixed(1)}%`;
+      };
+
+      function readInitialAmount() {
+        try {
+          const queryValue = new URLSearchParams(location.search).get("raised");
+          if (queryValue && /^\d+$/.test(queryValue)) {
+            return clampAmount(queryValue);
+          }
+        } catch {}
+        try {
+          const saved = localStorage.getItem(AMOUNT_STORAGE_KEY);
+          if (saved !== null && /^\d+$/.test(saved)) {
+            return clampAmount(saved);
+          }
+        } catch {}
+        return clampAmount(window.CAMPAIGN.raisedUGX);
+      }
+
+      const course = $("course");
+      const courseLength = course.getTotalLength();
+      const trail = $("gold-trail");
+      const runner = $("runner");
+      const checkpoints = Array.from(document.querySelectorAll(".checkpoint"));
+      let visualProgress = 0;
+      let animationFrame = 0;
+      let currentAmount = readInitialAmount();
+
+      checkpoints.forEach((marker) => {
+        const split = (Number(marker.dataset.km) * 1000) / TOTAL_METRES;
+        const point = course.getPointAtLength(courseLength * split);
+        marker.querySelectorAll("circle").forEach((c) => {
+          c.setAttribute("cx", point.x);
+          c.setAttribute("cy", point.y);
+        });
+      });
+
+      function drawRace(fraction) {
+        const safeFraction = Math.min(1, Math.max(0, fraction));
+        visualProgress = safeFraction;
+        const point = course.getPointAtLength(courseLength * safeFraction);
+        runner.setAttribute("transform", `translate(${point.x} ${point.y})`);
+        trail.setAttribute("opacity", safeFraction > 0 ? "1" : "0");
+        trail.setAttribute("stroke-dasharray", safeFraction >= 1 ? "none" : `${safeFraction * 100} 100`);
+        checkpoints.forEach((marker) => {
+          const split = (Number(marker.dataset.km) * 1000) / TOTAL_METRES;
+          marker.classList.toggle("is-passed", safeFraction >= split);
+        });
+      }
+
+      function animateRace(target) {
+        cancelAnimationFrame(animationFrame);
+        const destination = Math.min(1, Math.max(0, target));
+        const startValue = visualProgress;
+        const difference = destination - startValue;
+        if (reduceMotion.matches || Math.abs(difference) < 0.0001) {
+          drawRace(destination);
+          return;
+        }
+        let startTime;
+        function frame(now) {
+          if (startTime === undefined) startTime = now;
+          const elapsed = Math.min(1, (now - startTime) / 1200);
+          const eased = 1 - Math.pow(1 - elapsed, 3);
+          drawRace(startValue + difference * eased);
+          if (elapsed < 1 && !reduceMotion.matches) {
+            animationFrame = requestAnimationFrame(frame);
+          } else {
+            drawRace(destination);
+          }
+        }
+        animationFrame = requestAnimationFrame(frame);
+      }
+
+      function createShareUrl(amount) {
+        if (!/^https?:$/.test(location.protocol)) return "";
+        try {
+          const url = new URL(location.href);
+          url.searchParams.set("raised", String(amount));
+          url.hash = "";
+          return url.toString();
+        } catch {
+          return `${location.origin}${location.pathname}`;
+        }
+      }
+
+      function getShareText(amount, metres, reached) {
+        const phone = $("recipient-number").textContent.trim();
+        return reached
+          ? "We crossed the finish line! Thank you for helping The 5K for Cissy reach Nakazzi Cecilia's UGX 500,000 tuition goal."
+          : `Join The 5K for Cissy! We're raising UGX ${number(GOAL_UGX)} for our classmate Nakazzi Cecilia's tuition by Sunday. Every UGX 100 is one metre, and we've reached ${number(metres)} m. Give via mobile money: ${phone} (Nakazzi Cecilia).`;
+      }
+
+      function updateShareLink(amount, metres, reached) {
+        const shareUrl = createShareUrl(amount);
+        const shareText = getShareText(amount, metres, reached);
+        $("whatsapp-share").href = `https://wa.me/?text=${encodeURIComponent(shareText + (shareUrl ? `\n\n${shareUrl}` : ""))}`;
+      }
+
+      function updateCampaign(amount, animate = true) {
+        currentAmount = clampAmount(amount);
+        const outstanding = Math.max(0, GOAL_UGX - currentAmount);
+        const metres = Math.min(TOTAL_METRES, Math.floor(currentAmount / UGX_PER_METRE));
+        const progress = Math.min(1, currentAmount / GOAL_UGX);
+        const reached = currentAmount === GOAL_UGX;
+        const passed = [1, 2, 3, 4].filter((km) => metres >= km * 1000);
+        $("amount-raised").textContent = number(currentAmount);
+        $("amount-left").textContent = number(outstanding);
+        $("metres-left").textContent = reached ? "Finish line crossed!" : `${number(TOTAL_METRES - metres)} m to the finish`;
+        $("distance-badge").textContent = `${number(metres)} m run`;
+        $("track-percent").textContent = percentLabel(progress);
+        $("track-distance").textContent = `${number(metres)} m / ${number(TOTAL_METRES)} m`;
+        $("track-caption").textContent = reached ? "GOAL REACHED!" : "OF THE WAY THERE";
+        $("goal-message").hidden = !reached;
+        $("raised-input").value = number(currentAmount);
+        $("editor-current").textContent = `UGX ${number(currentAmount)}`;
+        $("track-description").textContent = `${percentLabel(progress)} of the goal reached. ${number(metres)} metres of ${number(TOTAL_METRES)} metres run. ` + (passed.length ? `Checkpoints passed: ${passed.map((km) => `${km}K`).join(", ")}.` : "No checkpoints passed yet.");
+        updateShareLink(currentAmount, metres, reached);
+        if (animate) {
+          animateRace(progress);
+        } else {
+          drawRace(progress);
+        }
+      }
+
+      drawRace(0);
+      updateCampaign(currentAmount, true);
+
+      // Interactive Checkpoints on Mobile & Desktop
+      const checkpointMessage = $("checkpoint-message");
+      const checkpointGiveBtn = $("checkpoint-give-btn");
+
+      function inspectCheckpoint(km) {
+        const milestoneUGX = km * 100000;
+        const remaining = Math.max(0, milestoneUGX - currentAmount);
+        if (remaining === 0) {
+          checkpointMessage.textContent = `${km}K Checkpoint (UGX ${number(milestoneUGX)}) — Passed! Thank you!`;
+        } else {
+          checkpointMessage.textContent = `${km}K Checkpoint (UGX ${number(milestoneUGX)}) — UGX ${number(remaining)} away.`;
+        }
+      }
+
+      checkpoints.forEach((marker) => {
+        const km = Number(marker.dataset.km);
+        marker.addEventListener("click", () => inspectCheckpoint(km));
+        marker.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            inspectCheckpoint(km);
+          }
+        });
+      });
+
+      checkpointGiveBtn.addEventListener("click", () => {
+        $("give-card").scrollIntoView({ behavior: "smooth" });
+      });
+
+      // Interactive Gift / Distance Boost Preview Pills
+      const boostButtons = Array.from(document.querySelectorAll(".boost-pill"));
+      const boostFeedback = $("boost-feedback");
+
+      boostButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          boostButtons.forEach((b) => b.classList.remove("is-selected"));
+          btn.classList.add("is-selected");
+          const gift = Number(btn.dataset.gift);
+          const metres = Math.floor(gift / UGX_PER_METRE);
+          boostFeedback.textContent = `A UGX ${number(gift)} gift moves Cissy ${number(metres)} metres closer to the finish!`;
+        });
+      });
+
+      // Active Mobile Money Dial Prompts (Airtel & MTN)
+      const networkButtons = Array.from(document.querySelectorAll(".network-btn"));
+      const networkPanel = $("network-prompt-panel");
+      const networkTitle = $("network-prompt-title");
+      const networkSteps = $("network-prompt-steps");
+      const networkDialLink = $("network-dial-link");
+      const networkDialText = $("network-dial-text");
+      const networkCopyBtn = $("network-copy-btn");
+      const closeNetworkPrompt = $("close-network-prompt");
+
+      const NETWORK_INFO = {
+        airtel: {
+          title: "Airtel Money (*185#)",
+          code: "*185#",
+          tel: "tel:*185%23",
+          steps: 'Dial <strong>*185#</strong>, pick <strong>Send Money</strong>, enter <strong>0709208673</strong>, and verify <strong>Nakazzi Cecilia</strong>.'
+        },
+        mtn: {
+          title: "MTN MoMo (*165#)",
+          code: "*165#",
+          tel: "tel:*165%23",
+          steps: 'Dial <strong>*165#</strong>, pick <strong>Send Money</strong>, enter <strong>0709208673</strong>, and verify <strong>Nakazzi Cecilia</strong>.'
+        }
+      };
+
+      function openNetworkPrompt(key) {
+        const info = NETWORK_INFO[key];
+        if (!info) return;
+        networkButtons.forEach((btn) => {
+          const active = btn.dataset.network === key;
+          btn.classList.toggle("is-active", active);
+          btn.setAttribute("aria-expanded", String(active));
+        });
+        networkTitle.textContent = info.title;
+        networkSteps.innerHTML = info.steps;
+        networkDialLink.href = info.tel;
+        networkDialText.textContent = `Dial ${info.code}`;
+        networkPanel.hidden = false;
+      }
+
+      networkButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const isAlreadyActive = btn.classList.contains("is-active") && !networkPanel.hidden;
+          if (isAlreadyActive) {
+            networkPanel.hidden = true;
+            btn.classList.remove("is-active");
+            btn.setAttribute("aria-expanded", "false");
+          } else {
+            openNetworkPrompt(btn.dataset.network);
+          }
+        });
+      });
+
+      closeNetworkPrompt.addEventListener("click", () => {
+        networkPanel.hidden = true;
+        networkButtons.forEach((btn) => {
+          btn.classList.remove("is-active");
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // ===== PASSWORD PROTECTION FOR ADMIN EDITOR =====
+      const ADMIN_PASSWORD = "4050";
+      const adminGate = $("admin-gate");
+      const adminPasswordInput = $("admin-password");
+      const verifyAdminBtn = $("verify-admin-btn");
+      const updateEditorPanel = $("update-editor-panel");
+      const passwordStatus = $("password-status");
+      const lockEditorBtn = $("lock-editor-btn");
+
+      function isAdminUnlocked() {
+        try {
+          return sessionStorage.getItem("cissy-admin-unlocked") === "1";
+        } catch {
+          return false;
+        }
+      }
+
+      function unlockEditor() {
+        updateEditorPanel.hidden = false;
+        adminGate.hidden = true;
+        const amountInput = $("raised-input");
+        if (amountInput) {
+          amountInput.focus();
+          amountInput.select();
+        }
+      }
+
+      function lockEditor() {
+        updateEditorPanel.hidden = true;
+        adminGate.hidden = false;
+        adminPasswordInput.value = "";
+        passwordStatus.textContent = "";
+        passwordStatus.classList.remove("is-error");
+        try {
+          sessionStorage.removeItem("cissy-admin-unlocked");
+        } catch {}
+      }
+
+      // Check session on load
+      if (isAdminUnlocked()) {
+        unlockEditor();
+      }
+
+      verifyAdminBtn.addEventListener("click", () => {
+        const entered = adminPasswordInput.value.trim();
+        if (entered === ADMIN_PASSWORD) {
+          passwordStatus.classList.remove("is-error");
+          passwordStatus.textContent = "";
+          try {
+            sessionStorage.setItem("cissy-admin-unlocked", "1");
+          } catch {}
+          unlockEditor();
+        } else {
+          passwordStatus.classList.add("is-error");
+          passwordStatus.textContent = "Incorrect password. Try again.";
+          adminPasswordInput.value = "";
+          adminPasswordInput.focus();
+        }
+      });
+
+      adminPasswordInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          verifyAdminBtn.click();
+        }
+      });
+
+      lockEditorBtn.addEventListener("click", lockEditor);
+
+      // ===== ORGANIZER UPDATE FORM =====
+      const updateForm = $("update-form");
+      const amountInput = $("raised-input");
+      const updateStatus = $("update-status");
+      const updateLabel = $("update-label");
+      let statusTimer;
+
+      amountInput.addEventListener("focus", () => {
+        amountInput.select();
+        amountInput.removeAttribute("aria-invalid");
+        updateStatus.classList.remove("is-error");
+      });
+
+      amountInput.addEventListener("blur", () => {
+        const parsed = parseAmount(amountInput.value);
+        if (parsed !== null) amountInput.value = number(parsed);
+      });
+
+      amountInput.addEventListener("input", () => {
+        amountInput.removeAttribute("aria-invalid");
+        updateStatus.classList.remove("is-error");
+        if (updateStatus.textContent) updateStatus.textContent = "";
+      });
+
+      document.querySelectorAll("[data-add]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const base = parseAmount(amountInput.value);
+          const addition = Number(button.dataset.add);
+          const updated = clampAmount((base === null ? currentAmount : base) + addition);
+          amountInput.value = number(updated);
+          amountInput.focus();
+          amountInput.select();
+        });
+      });
+
+      updateForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        clearTimeout(statusTimer);
+        const amount = parseAmount(amountInput.value);
+        if (amount === null) {
+          amountInput.setAttribute("aria-invalid", "true");
+          updateStatus.classList.add("is-error");
+          updateStatus.textContent = "Enter a valid total amount collected.";
+          amountInput.focus();
+          return;
+        }
+        try {
+          localStorage.setItem(AMOUNT_STORAGE_KEY, String(amount));
+        } catch {}
+        updateStatus.classList.remove("is-error");
+        updateCampaign(amount, true);
+        updateLabel.textContent = "Updated!";
+        updateStatus.textContent = `Race updated to UGX ${number(amount)}.`;
+        statusTimer = setTimeout(() => {
+          updateLabel.textContent = "Update race";
+          updateStatus.textContent = "";
+        }, 2800);
+      });
+
+      // Deadline Calculation (Kampala Time)
+      const DAY = 86400000;
+      const ugandaCalendar = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Africa/Kampala",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      });
+
+      function todayInUganda() {
+        const parts = Object.fromEntries(
+          ugandaCalendar.formatToParts(new Date()).map(({ type, value }) => [type, value])
+        );
+        return Date.UTC(
+          Number(parts.year),
+          Number(parts.month) - 1,
+          Number(parts.day)
+        );
+      }
+
+      const firstDay = todayInUganda();
+      const nextSunday = firstDay + ((7 - new Date(firstDay).getUTCDay()) % 7) * DAY;
+      const configuredDate = /^\d{4}-\d{2}-\d{2}$/.test(window.CAMPAIGN.deadlineSunday)
+        ? new Date(`${window.CAMPAIGN.deadlineSunday}T00:00:00Z`)
+        : null;
+      const validConfiguredDate = configuredDate && !Number.isNaN(configuredDate.getTime()) && configuredDate.getUTCDay() === 0 && configuredDate.toISOString().slice(0, 10) === window.CAMPAIGN.deadlineSunday;
+      const deadline = validConfiguredDate ? configuredDate.getTime() : nextSunday;
+
+      function updateDeadline() {
+        const days = Math.round((deadline - todayInUganda()) / DAY);
+        let longText;
+        let shortText;
+        if (days > 0) {
+          longText = `Ends Sunday, ${days} ${days === 1 ? "day" : "days"} left`;
+          shortText = `${days}d left`;
+        } else if (days === 0) {
+          longText = "Ends today";
+          shortText = "Today";
+        } else {
+          longText = "Campaign ended";
+          shortText = "Ended";
+        }
+        $("deadline-text").textContent = longText;
+        $("deadline-short").textContent = shortText;
+      }
+
+      updateDeadline();
+      setInterval(updateDeadline, 60000);
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) updateDeadline();
+      });
+
+      // Copy Number Logic
+      const phoneElement = $("recipient-number");
+      const phone = phoneElement.textContent.trim();
+      const copyButton = $("copy-number");
+      const copyStatus = $("copy-status");
+      let resetCopy;
+
+      function legacyCopy(text) {
+        const field = document.createElement("textarea");
+        field.value = text;
+        field.readOnly = true;
+        field.style.cssText = "position:fixed;top:0;left:0;opacity:0;font-size:16px;pointer-events:none";
+        document.body.append(field);
+        field.select();
+        field.setSelectionRange(0, field.value.length);
+        try {
+          return document.execCommand("copy");
+        } catch {
+          return false;
+        } finally {
+          field.remove();
+        }
+      }
+
+      async function handleCopy(triggerBtn, labelEl) {
+        clearTimeout(resetCopy);
+        let copied = false;
+        try {
+          if (navigator.clipboard?.writeText) {
+            await navigator.clipboard.writeText(phone);
+            copied = true;
+          }
+        } catch {}
+        if (!copied) copied = legacyCopy(phone);
+        if (copied) {
+          if (labelEl) labelEl.textContent = "Copied!";
+          copyStatus.textContent = `Mobile money number ${phone} copied!`;
+          copyStatus.classList.remove("sr-only");
+        } else {
+          if (labelEl) labelEl.textContent = "Copy number";
+          copyStatus.classList.remove("sr-only");
+          copyStatus.textContent = `Couldn't copy automatically. Copy the number manually: ${phone}.`;
+          const selection = window.getSelection();
+          if (selection) {
+            const range = document.createRange();
+            range.selectNodeContents(phoneElement);
+            selection.removeAllRanges();
+            selection.addRange(range);
+          }
+        }
+        resetCopy = setTimeout(() => {
+          $("copy-label").textContent = "Copy number";
+          networkCopyBtn.textContent = `Copy ${phone}`;
+          if (copied) copyStatus.textContent = "";
+        }, 2400);
+      }
+
+      copyButton.addEventListener("click", () => handleCopy(copyButton, $("copy-label")));
+      networkCopyBtn.addEventListener("click", () => handleCopy(networkCopyBtn, networkCopyBtn));
+
+      // Mobile Bottom Dock Share (uses native Web Share API if available, else WhatsApp)
+      $("dock-share").addEventListener("click", async () => {
+        const metres = Math.min(TOTAL_METRES, Math.floor(currentAmount / UGX_PER_METRE));
+        const reached = currentAmount === GOAL_UGX;
+        const shareUrl = createShareUrl(currentAmount);
+        const shareText = getShareText(currentAmount, metres, reached);
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: "The 5K for Cissy",
+              text: shareText,
+              url: shareUrl || location.href
+            });
+            return;
+          } catch {}
+        }
+        window.open($("whatsapp-share").href, "_blank", "noopener,noreferrer");
+      });
+
+      // Theme Toggle
+      const themePreference = window.matchMedia("(prefers-color-scheme: dark)");
+      const themeButton = $("theme-toggle");
+      const root = document.documentElement;
+
+      function isDark() {
+        return root.dataset.theme ? root.dataset.theme === "dark" : themePreference.matches;
+      }
+
+      function updateThemeButton() {
+        const dark = isDark();
+        const label = `Switch to ${dark ? "light" : "dark"} mode`;
+        themeButton.setAttribute("aria-label", label);
+        themeButton.title = label;
+        $("moon-icon").style.display = dark ? "none" : "";
+        $("sun-icon").style.display = dark ? "" : "none";
+        document.querySelector('meta[name="theme-color"]').content = dark ? "#141923" : "#faf7ef";
+      }
+
+      themeButton.addEventListener("click", () => {
+        const theme = isDark() ? "light" : "dark";
+        root.dataset.theme = theme;
+        try {
+          localStorage.setItem("cissy-theme", theme);
+        } catch {}
+        updateThemeButton();
+      });
+
+      themePreference.addEventListener?.("change", updateThemeButton);
+      updateThemeButton();
+    })();
+  </script>
+</body>
+</html>
